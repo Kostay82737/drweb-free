@@ -1,0 +1,60 @@
+{
+    "version": "1.0.0",
+    "last_updated": "2024-03-20",
+    "signatures": {
+        "44d88612fea8a8f36de82e1278abb02f": {
+            "name": "Trojan.Win32.Generic",
+            "type": "trojan",
+            "description": "Универсальный троян",
+            "severity": "high"
+        },
+        "d41d8cd98f00b204e9800998ecf8427e": {
+            "name": "Virus.Win32.Empty",
+            "type": "virus",
+            "description": "Пустой файл",
+            "severity": "low"
+        },
+        "5d41402abc4b2a76b9719d911017c592": {
+            "name": "Backdoor.Win32.Generic",
+            "type": "backdoor",
+            "description": "Универсальный бэкдор",
+            "severity": "critical"
+        }
+    },
+    "heuristic_rules": {
+        "suspicious_strings": [
+            "malware",
+            "virus",
+            "trojan",
+            "exploit",
+            "payload",
+            "backdoor",
+            "rootkit",
+            "ransomware",
+            "keylogger",
+            "spyware"
+        ],
+        "suspicious_extensions": [
+            ".exe",
+            ".dll",
+            ".bat",
+            ".cmd",
+            ".vbs",
+            ".js",
+            ".ps1",
+            ".py",
+            ".doc",
+            ".docx",
+            ".xls",
+            ".xlsx",
+            ".ppt",
+            ".pptx",
+            ".pdf"
+        ],
+        "packers": {
+            "UPX!": "UPX",
+            "MZ\x90\x00": "PE",
+            "PK\x03\x04": "ZIP"
+        }
+    }
+} 
